@@ -1,12 +1,6 @@
-package dpi.ir.ocp8.lambda.functionalInterface;
+package com.midway.ocp8.lambda;
 
-import dpi.ir.ocp8.lambda.model.Dog;
-
-/**
- * Author: <a href="mailto:k1.tehrani@gmail.com">Kayvan Tehrani</a>
- *
- * Description: <the description of the class for java doc by those that might use it, please use html if possible>
- */
+import com.midway.ocp8.lambda.model.Dog;
 
 //@FunctionalInterface
 public interface DogQuerier {

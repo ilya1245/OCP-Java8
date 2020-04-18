@@ -1,6 +1,6 @@
-package dpi.ir.ocp8.lambda.functionalInterface;
+package com.midway.ocp8.lambda;
 
-import dpi.ir.ocp8.lambda.model.Dog;
+import com.midway.ocp8.lambda.model.Dog;
 
 /**
  * Author: <a href="mailto:k1.tehrani@gmail.com">Kayvan Tehrani</a>
