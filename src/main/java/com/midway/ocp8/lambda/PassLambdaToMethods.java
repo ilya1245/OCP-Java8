@@ -2,11 +2,6 @@ package com.midway.ocp8.lambda;
 
 import com.midway.ocp8.lambda.model.Dog;
 
-/**
- * Author: <a href="mailto:k1.tehrani@gmail.com">Kayvan Tehrani</a>
- *
- * Description: <the description of the class for java doc by those that might use it, please use html if possible>
- */
 public class PassLambdaToMethods {
 
   public static void main(String[] args) {

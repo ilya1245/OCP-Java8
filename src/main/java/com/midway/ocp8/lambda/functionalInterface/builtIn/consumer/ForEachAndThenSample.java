@@ -17,7 +17,7 @@ public class ForEachAndThenSample {
     dogs.add(zooey);
     Consumer<Dog> displayname = d -> System.out.println(d.getName() + "  ");
     dogs.forEach(displayname);
-    dogs.forEach(displayname.andThen(d -> d.bark()));
+    dogs.forEach(displayname.andThen(d -> d.bark()).andThen(d -> d.growl()));
   }
 
 }

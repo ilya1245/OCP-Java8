@@ -18,4 +18,8 @@ public class Dog {
   public void bark() {
     System.out.println("Woof!");
   }
+
+  public void growl() {
+    System.out.println("R-r-r!");
+  }
 }

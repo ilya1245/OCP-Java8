@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class SupplierSample4 {
 
   public static void main(String[] args) {
-    String host = "dpi.dpi.ir";
+    String host = "midway_123.com";
     int port = 80;
     //setup logging
     Logger logger = Logger.getLogger("Status Logger");

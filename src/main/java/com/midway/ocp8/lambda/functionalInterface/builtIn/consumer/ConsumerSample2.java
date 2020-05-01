@@ -11,7 +11,7 @@ public class ConsumerSample2 {
       System.out.println(key + ": " + value);
     };
 
-    printEnv.accept("USER", env.get("USER"));
+    printEnv.accept("USER", env.get("USERNAME"));
   }
 
 }

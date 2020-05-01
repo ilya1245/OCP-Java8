@@ -10,7 +10,7 @@ public class ConsumerSample4 {
     Map<String, String> env = System.getenv();
     User user = new User();
     BiConsumer<String, String> findUsername = (key, value) -> {
-      if (key.equals("USER")) {
+      if (key.equals("USERNAME")) {
         user.setUsername(value);
       }
     };

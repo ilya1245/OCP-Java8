@@ -10,5 +10,6 @@ public class ConsumerSample3 {
     List<String> dogNames = Arrays.asList("boi", "clover", "zooey");
     Consumer<String> printName = name -> System.out.println(name);
     dogNames.forEach(printName);
+    dogNames.forEach(n -> System.out.println(n));
   }
 }
