@@ -17,7 +17,11 @@ public class ForEachAndThenSample {
     dogs.add(zooey);
     Consumer<Dog> displayname = d -> System.out.println(d.getName() + "  ");
     dogs.forEach(displayname);
+    System.out.println("--------------------------------------------");
     dogs.forEach(displayname.andThen(d -> d.bark()).andThen(d -> d.growl()));
+    System.out.println("--------------------------------------------");
+    dogs.removeIf(d -> d.getName().startsWith("c"));
+    dogs.forEach(displayname);
   }
 
 }
