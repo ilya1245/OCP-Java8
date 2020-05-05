@@ -1,12 +1,9 @@
 package com.midway.ocp8.stream;
 
-import br.fernando.ch06_generics_and_collections_Objective.part03_Using_Collections.Test02;
 import lombok.Data;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +16,8 @@ public class StreamFiltering {
         doSimpleFiltering();
         System.out.println();
         doFileLineFiltering();
+        System.out.println();
+        doChainFiltering();
 
     }
 
@@ -59,6 +58,15 @@ public class StreamFiltering {
         return dvdList;
     }
 
+    private static void doChainFiltering() {
+        List<String> names = Arrays.asList("Boi", "Charis", "Zooey", "Bokeh", "Clover", "Aiko");
+
+        names.stream() // create the stream
+                .filter(s -> s.startsWith("B") || s.startsWith("C")) // filter by first letter
+                .filter(s -> s.length() > 3) // Filter by length - Boi out
+                .forEach(System.out::println); // print
+//        ; srteam won't work if uncommented
+    }
 
     @Data
     static class DVDInfo {
