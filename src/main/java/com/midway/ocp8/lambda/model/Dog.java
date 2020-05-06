@@ -9,6 +9,11 @@ public class Dog {
   private String name;
   private int weight;
 
+  public Dog(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
   public Dog(int age, String name, int weight) {
     this.age = age;
     this.name = name;

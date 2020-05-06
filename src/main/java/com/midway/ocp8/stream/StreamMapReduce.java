@@ -20,12 +20,40 @@ public class StreamMapReduce {
     );
 
     public static void main(String[] args) {
-        OptionalDouble avg = readings.stream().mapToDouble(r -> r.getValue()).filter(v -> v >= 406d && v < 407d).average();
-        System.out.println("avg is " + (avg.isPresent() ? avg : "empty"));
+        OptionalDouble avg = readings.stream().mapToDouble(r -> r.getValue())
+                .filter(v -> v >= 406d && v < 407d).average();
+        System.out.println("Average is " + (avg.isPresent() ? avg.getAsDouble() : "empty"));
         System.out.println("------------------------------------");
-        avg = readings.stream().mapToDouble(r -> r.getValue()).filter(v -> v >= 106d && v < 107d).average();
-        System.out.println("avg is " + (avg.isPresent() ? avg : "empty"));
 
+        avg = readings.stream().mapToDouble(r -> r.getValue())
+                .filter(v -> v >= 106d && v < 107d).average();
+        System.out.println("Average is " + (avg.isPresent() ? avg.getAsDouble() : "empty"));
+        System.out.println("===========================================");
+
+        double sum = readings.stream().mapToDouble(r -> r.getValue())
+                .filter(v -> v >= 406d && v < 407d).sum(); //check 106-107 is 0
+        System.out.println("Sum is " + sum);
+        System.out.println("------------------------------------");
+
+        sum = readings.stream().mapToDouble(r -> r.getValue())
+                .filter(v -> v >= 406d && v < 407d).reduce(0d, (a, b) -> a + b); //check 106-107 is 0
+        System.out.println("Sum is " + sum);
+        System.out.println("------------------------------------");
+
+        OptionalDouble sum2 = readings.stream().mapToDouble(r -> r.getValue())
+                .filter(v -> v >= 406d && v < 407d).reduce((v1, v2) -> v1 + v2); //check 106-107 is empty
+        System.out.println("Sum is " + (sum2.isPresent() ? sum2.getAsDouble() : "empty"));
+        System.out.println("------------------------------------");
+
+        OptionalDouble min = readings.stream().mapToDouble(r -> r.getValue())
+                .filter(v -> v >= 306d && v < 507d).reduce((v1, v2) -> (v1 < v2 ? v1 : v2));
+        System.out.println("Min is " + (min.isPresent() ? min.getAsDouble() : "empty"));
+        System.out.println("------------------------------------");
+
+        OptionalDouble max = readings.stream().mapToDouble(r -> r.getValue())
+                .filter(v -> v >= 406d && v < 407d).reduce((v1, v2) -> (v1 > v2 ? v1 : v2));
+        max.ifPresent(v -> System.out.println("Max is " + v));
+        System.out.println("------------------------------------");
     }
 
     @Data
