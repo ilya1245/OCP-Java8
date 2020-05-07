@@ -22,7 +22,7 @@ public class StreamMatch {
         System.out.println("------------------------------------");
 
         boolean notRed = dogs.stream() //
-                .map(d -> d.getName()) // map from Dog to Dog's name (String)
+                .map(Dog::getName) // map from Dog to Dog's name (String)
                 .noneMatch(n -> n.equals("red")); // are any of the dogs named "red"?
         System.out.println("None of the dogs are red: " + notRed);
     }
