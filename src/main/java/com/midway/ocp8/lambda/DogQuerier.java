@@ -1,6 +1,6 @@
 package com.midway.ocp8.lambda;
 
-import com.midway.ocp8.lambda.model.Dog;
+import com.midway.ocp8.model.Dog;
 
 @FunctionalInterface
 public interface DogQuerier {

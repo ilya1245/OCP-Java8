@@ -1,4 +1,4 @@
-package com.midway.ocp8.lambda.model;
+package com.midway.ocp8.model;
 
 import lombok.Data;
 
@@ -14,7 +14,7 @@ public class Dog {
     this.age = age;
   }
 
-  public Dog(int age, String name, int weight) {
+  public Dog(String name, int age, int weight) {
     this.age = age;
     this.name = name;
     this.weight = weight;

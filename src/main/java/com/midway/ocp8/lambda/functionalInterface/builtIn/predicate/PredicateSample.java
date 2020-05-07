@@ -1,13 +1,13 @@
 package com.midway.ocp8.lambda.functionalInterface.builtIn.predicate;
 
-import com.midway.ocp8.lambda.model.Dog;
+import com.midway.ocp8.model.Dog;
 import java.util.function.Predicate;
 
 public class PredicateSample {
 
   public static void main(String[] args) {
-    Dog boi = new Dog(9, "boi", 30);
-    Dog clover = new Dog(10, "clover", 25);
+    Dog boi = new Dog("boi", 9, 30);
+    Dog clover = new Dog("clover", 10, 25);
     Predicate<Dog> agePred = d -> d.getAge() > 9;
 
     System.out.println("Is Boi older than 9? " + agePred.test(boi));

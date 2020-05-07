@@ -1,6 +1,6 @@
 package com.midway.ocp8.lambda.functionalInterface.builtIn.consumer;
 
-import com.midway.ocp8.lambda.model.Dog;
+import com.midway.ocp8.model.Dog;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
@@ -9,9 +9,9 @@ public class ForEachAndThenSample {
 
   public static void main(String[] args) {
     List<Dog> dogs = new ArrayList<>();
-    Dog boi = new Dog(30, "boi", 6);
-    Dog clover = new Dog(32, "clover", 8);
-    Dog zooey = new Dog(31, "zooey", 7);
+    Dog boi = new Dog("boi", 30, 6);
+    Dog clover = new Dog("clover", 32, 8);
+    Dog zooey = new Dog("zooey", 31, 7);
     dogs.add(boi);
     dogs.add(clover);
     dogs.add(zooey);

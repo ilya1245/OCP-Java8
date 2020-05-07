@@ -1,12 +1,12 @@
 package com.midway.ocp8.lambda;
 
-import com.midway.ocp8.lambda.model.Dog;
+import com.midway.ocp8.model.Dog;
 
 public class SyntaxBasics {
 
   public static void main(String[] args) {
-    Dog boi = new Dog(8, "Boi", 30);
-    Dog clover = new Dog(12, "Clover", 35);
+    Dog boi = new Dog("Boi", 8, 30);
+    Dog clover = new Dog("Clover", 12, 35);
 
     DogQuerier dq = new DogQuerier() {
       @Override

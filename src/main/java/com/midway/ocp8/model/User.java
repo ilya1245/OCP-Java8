@@ -1,4 +1,4 @@
-package com.midway.ocp8.lambda.model;
+package com.midway.ocp8.model;
 
 import lombok.Data;
 

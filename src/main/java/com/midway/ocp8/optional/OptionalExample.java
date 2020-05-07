@@ -1,7 +1,6 @@
 package com.midway.ocp8.optional;
 
-import br.fernando.ch09_Streams_Objective.par06_Optionals.Test04;
-import com.midway.ocp8.lambda.model.Dog;
+import com.midway.ocp8.model.Dog;
 
 import java.util.Arrays;
 import java.util.List;
