@@ -1,6 +1,5 @@
 package com.midway.ocp8.stream;
 
-import br.fernando.ch09_Streams_Objective.par05_map_filter_Reduce_with_average_and_Optionals.Test03;
 import lombok.Data;
 
 import java.util.Arrays;
