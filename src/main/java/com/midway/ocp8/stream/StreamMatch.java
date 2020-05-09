@@ -1,14 +1,14 @@
 package com.midway.ocp8.stream;
 
 import com.midway.ocp8.model.Dog;
-import com.midway.ocp8.util.Animals;
+import com.midway.ocp8.util.Utils;
 
 import java.util.List;
 
 public class StreamMatch {
 
     public static void main(String[] args) {
-        List<Dog> dogs = Animals.getDogList();
+        List<Dog> dogs = Utils.getDogList();
         boolean cNames = dogs.stream().filter(d -> d.getWeight() > 11)
                 .anyMatch(d -> d.getName().startsWith("c"));
         System.out.println("Are there any dogs > 11 pounds whose name starts with 'c'? " + cNames);

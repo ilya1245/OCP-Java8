@@ -2,7 +2,7 @@ package com.midway.ocp8.stream;
 
 import com.midway.ocp8.model.Dog;
 import com.midway.ocp8.model.Duck;
-import com.midway.ocp8.util.Animals;
+import com.midway.ocp8.util.Utils;
 
 import java.util.Comparator;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 public class StreamSort {
 
     public static void main(String[] args) {
-        List<Duck> duckList = Animals.getDuckList();
+        List<Duck> duckList = Utils.getDuckList();
         duckList.stream()
                 .sorted() //the objects must have "compare" method
                 .forEach(System.out::println);
@@ -22,7 +22,7 @@ public class StreamSort {
                 .forEach(System.out::println);
         System.out.println("====================================");
 
-        List<Dog> dogList = Animals.getDogList();
+        List<Dog> dogList = Utils.getDogList();
         // Sort names
         dogList.stream().map(d -> d.getName())
                 .sorted()
@@ -64,5 +64,9 @@ public class StreamSort {
                 .sorted(Comparator.reverseOrder())
                 .forEach(System.out::println);
 
+    }
+
+    private static int compare(Duck d1, Duck d2) {
+        return d1.getAge() - d2.getAge();
     }
 }
