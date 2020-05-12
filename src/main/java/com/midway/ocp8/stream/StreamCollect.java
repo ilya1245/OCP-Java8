@@ -45,16 +45,19 @@ public class StreamCollect {
     private static List<DVDInfo> getDvdInfoList() {
         List<DVDInfo> dvdList = new ArrayList<>();
 
-        try (final Stream<String> stream = Files.lines(Paths.get(Constants.DVDINFO_FILE_PATH))) {
+        try (final Stream<String> stream1 = Files.lines(Paths.get(Constants.DVDINFO_FILE_PATH));
+             final Stream<String> stream2 = Files.lines(Paths.get(Constants.DVDINFO_FILE_PATH))) {
 
             // Version1
-/*            dvdList = stream.map(l -> {
+            dvdList = stream1.map(l -> {
                 String[] dvd = l.split("/");
                 return new DVDInfo(dvd[0], dvd[1], dvd[2]);
-            }).collect(Collectors.toList()); // collect names*/
+            }).collect(Collectors.toList()); // collect names
+            dvdList.forEach(System.out::println); // print names
+            System.out.println("------------------------------------");
 
             // Version2
-            dvdList = stream.map(l -> l.split("/"))
+            dvdList = stream2.map(l -> l.split("/"))
                     .map(s -> new DVDInfo(s[0], s[1], s[2]))
                     .collect(Collectors.toList());
 
