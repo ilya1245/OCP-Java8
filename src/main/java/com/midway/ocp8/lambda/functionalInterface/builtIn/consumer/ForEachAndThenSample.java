@@ -1,6 +1,7 @@
 package com.midway.ocp8.lambda.functionalInterface.builtIn.consumer;
 
 import com.midway.ocp8.model.Dog;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;

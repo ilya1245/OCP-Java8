@@ -1,6 +1,7 @@
 package com.midway.ocp8.lambda.functionalInterface.builtIn.predicate;
 
 import com.midway.ocp8.model.Dog;
+
 import java.util.function.Predicate;
 
 public class PredicateSample {

@@ -1,8 +1,9 @@
 package com.midway.ocp8.lambda.functionalInterface.builtIn.consumer;
 
+import com.midway.ocp8.model.User;
+
 import java.util.Map;
 import java.util.function.BiConsumer;
-import com.midway.ocp8.model.User;
 
 public class ConsumerSample4 {
 
